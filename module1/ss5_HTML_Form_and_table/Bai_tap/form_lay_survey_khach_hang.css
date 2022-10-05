@@ -12,4 +12,8 @@ select{
 }
 .radio_class {
     width: 100px;
+    text-align: center;
+}
+.text_class{
+    text-align: center;
 }

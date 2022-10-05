@@ -1,0 +1,23 @@
+body{
+    background-color: orange;
+}
+.chess:nth-child(even){
+    background-color: white;
+}
+.chess:nth-child(odd){
+    background-color: black;
+}
+table{
+    height: 500px;
+    width: 500px;
+    border-collapse: collapse;
+}
+.chess_1:nth-child(even){
+    background-color: black;
+}
+.chess_1{
+    background-color: white;
+}
+td{
+    text-align: center;
+}

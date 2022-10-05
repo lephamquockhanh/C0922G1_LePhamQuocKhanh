@@ -1,0 +1,28 @@
+table{
+    border-collapse: collapse;
+    height: 300px;
+    width: 300px;
+}
+.block_1{
+    color: red;
+}
+.block_2{
+    color: black;
+}
+.block_3{
+    color: blue;
+}
+.block_4{
+    color: black;
+}
+.block_5{
+    color: white;
+    background-color: orange;
+}
+td{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: blue;
+}

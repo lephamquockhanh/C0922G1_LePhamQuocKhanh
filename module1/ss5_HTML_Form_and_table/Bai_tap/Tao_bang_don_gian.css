@@ -1,0 +1,23 @@
+.left_class{
+    text-align: right;
+    width: 1210px;
+}
+h1{
+    text-align: center;
+}
+.number{
+    text-align: center;
+}
+#ban{
+    width: 1380px;
+    border-collapse: collapse;
+}
+.folder{
+    background-color: orange;
+}
+.number_2{
+    background-color: yellow;
+}
+#title{
+    color: blue;
+}
