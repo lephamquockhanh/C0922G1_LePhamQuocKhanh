@@ -1,0 +1,15 @@
+select{
+    width: 750px;
+}
+#currency{
+    width: 70px;
+}
+#currency2{
+    width: 20px;
+}
+#table{
+    border-collapse: collapse;
+}
+.radio_class {
+    width: 100px;
+}
