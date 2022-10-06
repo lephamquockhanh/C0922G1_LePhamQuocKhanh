@@ -15,7 +15,7 @@ table{
 .chess_1:nth-child(even){
     background-color: black;
 }
-.chess_1{
+.chess_1:nth-child(odd){
     background-color: white;
 }
 td{
