@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<h3>Tính lãi ngân hàng</h3>
+<label>Số tiền gốc</label>
+<input type="text" id="goc"><br><br>
+<label>Lãi suất</label>
+<input type="text" id="lai"><br><br>
+<label>Số tháng mượn tiền</label>
+<input type="text" id="thang">
+<button type="button" onclick="tinh();">Tính</button>
+<p id="outPut"></p>
+</body>
+<script>
+    function tinh() {
+        let a1 = parseFloat(document.getElementById("goc").value);
+        let a2 = parseFloat(document.getElementById('lai').value);
+        let b1 = parseInt(document.getElementById('thang').value);
+        let c = b1;
+        let result;
+        result = a1*(1+a2*10/100/c)**c*b1/12;
+        document.getElementById('outPut').innerHTML = "tổng tiền phải trả sau "     + b1 +" tháng " + " là :" + result + "Đ";
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>nhập tuổi học sinh :</label>
+<input id="tuoi" type="text">
+<button onclick="nhapTuoi();" type="button">Nhập</button>
+<p id="ketQua"></p>
+</body>
+<script>
+    function nhapTuoi() {
+        let a = parseInt(document.getElementById('tuoi').value) >= 15;
+        if (a){
+            document.getElementById("ketQua").innerHTML = "đủ tuổi học lớp 10";
+        }else
+            document.getElementById('ketQua').innerHTML = "không đủ tuổi đọc lớp 10";
+    }
+</script>
+</html>

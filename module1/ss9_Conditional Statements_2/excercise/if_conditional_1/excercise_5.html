@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseFloat(prompt('nhập điểm kiểm tra'));
+    let b = parseFloat(prompt('nhập điểm giữa kì'));
+    let c = parseFloat(prompt('nhập điểm cuối kì'));
+    let tong = (a + (b*2) + (c*3))/6 ;
+    if (tong >= 8.0){
+        alert("học lực giỏi");
+    }else if ( tong >= 6.5){
+        alert("học lực khá");
+    }else if (tong >= 4.5) {
+        alert("học lực trung bình");
+    }else{
+        alert("học lực yếu");
+    }
+</script>
+
+</html>

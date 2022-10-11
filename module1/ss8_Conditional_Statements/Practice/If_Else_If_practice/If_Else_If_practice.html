@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pratice if else if</title>
+</head>
+<body>
+</body>
+<script>
+    let userName = prompt("who's there?",'');
+    if (userName == "admin"){
+        let passWord = prompt('Password?','');
+        alert('welcome');
+        if (passWord == "themaster"){
+            alert('welcome');
+        }else if (passWord == null){
+            alert("Canceled");
+        }else {
+            alert('wrong password');
+        }
+    }else if (userName == null){
+        alert("Canceled");
+    }else{
+        alert("I don't know you");
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    <input type="text" placeholder="nhập năm" id="nam">
+    <button type="button" onclick="tinhNam();">tính năm</button>
+    <p id="nam1"></p>
+</body>
+<script>
+    function tinhNam() {
+        let nam = parseInt(document.getElementById('nam').value);
+        let laNamNhuan;
+        let chiaHetcho4 = nam % 4 == 0;
+        if (chiaHetcho4){
+            let chiaHetcho100 = nam % 100 == 0;
+            if (chiaHetcho100){
+                let chiaHetcho400 = nam % 400 == 0;
+                if (chiaHetcho400){
+                    laNamNhuan = true;
+                }
+            }else {
+                laNamNhuan = true;
+            }
+        }
+        if (laNamNhuan){
+            document.getElementById('nam1').innerHTML = nam + " la nam nhuan";
+        }else {
+            document.getElementById('nam1').innerHTML = nam + " khong phai la nam nhuan";
+        }
+
+    }
+</script>
+</html>

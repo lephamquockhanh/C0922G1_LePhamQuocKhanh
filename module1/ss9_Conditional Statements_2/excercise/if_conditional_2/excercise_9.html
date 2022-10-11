@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseInt(prompt('nhập a'));
+    let b = parseInt(prompt('nhập b'));
+    let c = parseInt(prompt('nhập c'));
+    if( a>0 && b>0 && c>0){
+        if ( a+b>c && b+c>a && a+c>b){
+            alert('các cạnh là cạnh hình tam giác');
+        }else {
+            alert('các cạnh không phải là cạnh hình tam giác');
+        }
+    }else {
+        alert('mời nhập lại')
+    }
+</script>
+</html>

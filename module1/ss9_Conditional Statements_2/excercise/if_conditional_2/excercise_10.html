@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Cách tính tiền điện</h2>
+<h5>Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh <br>
+    Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh <br>
+    Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh<br>
+    Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh<br>
+    Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh<br>
+    Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh</h5>
+<p>Mời bạn nhập chữ điện:</p>
+<input type="text" id="chuDien">
+<button type="button" onclick="nhap();">Nhập</button>
+<p id="result"></p>
+</body>
+<script>
+    function nhap() {
+        let chuDien = parseInt(document.getElementById('chuDien').value);
+        let result;
+        if (chuDien<=50){
+            result = (50*1.678)*1000;
+        }else if (chuDien <= 100){
+            result = (50*1.678+(chuDien-50)*1.734)*1000;
+        }else if (chuDien <= 200){
+            result = (50*1.678+50*1.734+(chuDien-100)*2.014)*1000;
+        }else if(chuDien <= 300){
+            result = (50*1.678+50*1.734+100*2.014+(chuDien-200)*2.536)*1000;
+        }else if(chuDien <= 400){
+            result = (50*1.678+50*1.734+100*2.014+100*2.536+(chuDien-300)*2.834)*1000;
+        }else {
+            result = (50*1.678+50*1.734+100*2.014+100*2.536+100*2.834+(chuDien-400)*2.927)*1000;
+        }
+        let vat = (result*10)/100;
+        document.getElementById('result').innerHTML = "số tiền bạn phải trả là: " + (result+vat) +"Đ"
+    }
+
+</script>
+</html>

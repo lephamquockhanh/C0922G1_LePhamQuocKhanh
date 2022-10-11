@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<h1>tính thuế thu nhập cá nhân</h1>
+<img src="https://img.timviec.com.vn/2020/11/cach-tinh-thue-thu-nhap-ca-nhan-3.jpg" style="width: 300px;height: 300px"><br>
+<label>thu nhập tính thuế/tháng:</label>
+<input type="text" id="thuNhap"><br>
+<button type="button" onclick="tinh();">Tính</button>
+<p id="outPut"></p>
+</body>
+<script>
+    function tinh() {
+        let thuNhap1 = parseFloat(document.getElementById('thuNhap').value);
+        let thue;
+        if (thuNhap1 < 5){
+            document.getElementById('outPut').innerHTML = "Bạn không phải nộp thuế";
+        }else if (thuNhap1 == 5){
+            thue = thuNhap1*5/100;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }else if (thuNhap1 <= 10){
+            thue = thuNhap1*10/100-0.25;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }else if (thuNhap1 <= 18){
+            thue = thuNhap1*15/100-0.75;
+            document.getElementById('outPut').innerText = "Số thuế phải nộp là: " + thue + " triệu Đồng"
+        }else if (thuNhap1 <= 32){
+            thue = thuNhap1*20/100-1.65;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }else if (thuNhap1 <=52){
+            thue = thuNhap1*25/100-3.25;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }else if (thuNhap1 <=80){
+            thue = thuNhap1*30/100-5.85;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }else {
+            thue = thuNhap1*35/100-9.85;
+            document.getElementById('outPut').innerHTML = "Số thuế phải nộp là: " + thue + " triệu Đồng";
+        }
+
+    }
+</script>
+</html>

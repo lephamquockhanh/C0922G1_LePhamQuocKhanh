@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseInt(prompt('nhập a'));
+    let b = parseInt(prompt('nhập b'));
+    let c = parseInt(prompt("nhập c"));
+    let delta = (b*b) - 4*a*c;
+    let s = Math.sqrt(delta);
+    if (delta<0){
+        alert("phương trình vô nghiệm");
+    }else if(delta=0){
+        alert( "phương trình có 2 nghiệm kép x1 = x2 = "+ (-b/(a*2)));
+    }else {
+        alert("x1 = " + ((-b + s)/(2*a)));
+        alert("x2 = " + ((-b - s)/(2*a)));
+    }
+</script>
+</html>
