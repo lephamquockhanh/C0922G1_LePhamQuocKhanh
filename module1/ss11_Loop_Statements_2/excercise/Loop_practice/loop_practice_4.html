@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fibo;
+    document.write("1 | ");
+    for (let i = 0; i < 19; i++) {
+        fibo = a + b;
+        document.write(fibo + " | ");
+        a = b;
+        b = fibo;
+        if(fibo % 5 == 0){
+            document.write("Đã tìm thấy số chia hết cho 5");
+            break
+        }
+    }
+</script>
+</html>

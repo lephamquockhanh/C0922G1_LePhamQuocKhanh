@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Nhập giá trị cho biến n
+    // Kiểm tra n
+    // Nếu n <=2
+    // Thông báo nhập lại giá trị lớn hơn 2
+    // Nếu n >2
+    // In f1 và f2
+    // Cho biến i chạy từ 3 đến n
+    // Tính f=f1+f2
+    // In f ra
+    // Gán f1=f2
+    // Gán f2=f
+    //f(n) = f(n-1)+f(n-2)
+    let a = 0;
+    let b = 1;
+    let fibo;
+    document.write("1 | ");
+    for(let i=0;i<19;i++){
+        fibo=a+b;
+        document.write(fibo+" | ");
+        a=b;
+        b=fibo;
+    }
+
+</script>
+</html>

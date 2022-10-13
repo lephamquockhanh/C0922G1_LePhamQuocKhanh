@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fibo;
+    let sum = a + b;
+    count = 0;
+    document.write(0 + " / " + 1 + " / ");
+    for (i = 0; count <= 17; i++) {
+        fibo = a + b;
+        a = b;
+        b = fibo;
+        document.write(fibo + " / ");
+        sum += fibo;
+        count++;
+    }
+
+    document.write("tổng là: " + sum)
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = parseInt(prompt('nhập n số nguyên tố đầu tiên'));//tổng số nguyên tố nhập vào
+    let count = 0; //ước số
+    let countSNT = 0;//tổng số nguyên tố lấy được
+    for (let i = 2; i > 1; i++) {
+        if (countSNT < number) {
+            for (let a = 1; a <= i; a++) {
+                if (i % a == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2) {
+                document.write(i + "<br>");
+                countSNT += 1;
+            }
+            count = 0;
+        } else break;
+    }
+</script>
+</html>
