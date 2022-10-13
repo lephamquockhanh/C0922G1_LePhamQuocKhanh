@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="submit();">Chơi nào!</button>
+</body>
+<script>
+    function submit() {
+        let soDau = parseInt(prompt('Hãy nhập số nhỏ nhất trong khoảng!'));
+        let soCuoi = parseInt(prompt('Hãy nhập số lớn nhất trong khoảng!'));
+        let soCanDoan = parseInt(soDau + Math.random() * (soCuoi - soDau));
+        console.log(soCanDoan);
+        let soNhap = parseInt((prompt('Hãy nhập số bạn đoán!')));
+        let count = 0
+        while (soNhap != soCanDoan) {
+            count++;
+            if (count == 3) {
+                alert("Hết số lần đoán mất rồi!");
+                break;
+            } else if (soNhap < soCanDoan) {
+                alert("Số của bạn đoán bé hơn!");
+            } else {
+                alert("số của bạn đoán lớn hơn!");
+            }
+            soNhap = parseInt((prompt('Hãy nhập số bạn đoán!')));
+        }
+        if (count == 3) {
+            alert("Hết số lần đoán mất rồi!");
+        }else {
+            alert("Đoán đúng rồi, giỏi quá!");
+        }
+    }
+</script>
+</html>
