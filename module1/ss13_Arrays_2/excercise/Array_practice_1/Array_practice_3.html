@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let sum = 0
+    let num = [1, 2, 3, 4, 5]
+    let max = Math.max.apply(Math, num);
+    for (i = 0; i < num.length; i++) {
+        sum += num[i]/5;
+        console.log(sum)
+
+    }
+    document.write('Số lớn nhất là: ' + max + " giá trị trung bình là: " + sum );
+</script>
+</html>

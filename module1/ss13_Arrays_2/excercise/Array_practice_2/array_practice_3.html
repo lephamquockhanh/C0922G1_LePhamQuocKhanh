@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let num = ["a","b","c",1,2,3]
+    let count = 0
+    for (let item of num){
+        for ( i = 0 ; i< num.length; i ++){
+            if (item == i){
+                count++;
+            }
+        }
+    }
+    if(count != 0 ){
+        alert("số kí tự số là: " + count )
+    }
+</script>
+</html>
