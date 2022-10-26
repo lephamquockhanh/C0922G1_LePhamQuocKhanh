@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mang1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let mang2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major']
+    let inputStar = prompt('nhập vào ngôi sao');
+    let result = checkstar(inputStar);
+    document.write(result);
+
+    function checkstar(star) {
+        for (let i = 0; i < mang1.length; i++) {
+            if (star == mang1[i]) {
+                return mang2[i];
+            }
+            return "cant find"
+        }
+    }
+</script>
+</html>

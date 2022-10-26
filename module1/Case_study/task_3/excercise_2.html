@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangA = [1,2,3,4,5];
+    let mangB = [1,2,3];
+    for (let i = 0; i < mangA.length ; i++) {
+        for (j =0; j< mangB.length;j++){
+            mangA.splice(i,1);
+            mangB.splice(j,1);
+            j--;
+        }
+    }
+    alert("missing value (A,B) " + mangA )
+</script>
+</html>

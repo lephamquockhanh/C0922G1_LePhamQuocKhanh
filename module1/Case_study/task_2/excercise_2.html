@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let nguyenAm = ["u", "e", "o", "a", "i", "U", "E", "O", "A", "I"]
+    let kiTu = prompt('nhập kí tự');
+    let flag = false;
+    for (i = 0; i <= nguyenAm.length; i++) {
+        if (kiTu == nguyenAm[i]) {
+            flag = true;
+            break;
+        }
+    }
+    if (flag == true) {
+        alert('kí tự là nguyên âm ')
+    }else {
+        alert('kí tự không phải nguyên âm')
+    }
+</script>
+</html>

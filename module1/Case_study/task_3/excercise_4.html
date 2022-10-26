@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangA = [1,2,3,4,5];
+    let mangB = ["một", "hai","ba","bốn","năm"];
+    let so = prompt('nhập số từ 1 đến 5');
+    let flag = false;
+    for (let i = 0; i < mangA.length ; i++) {
+        for(let j = 0 ; j < mangB.length; j++){
+            if(so == mangA[i]){
+                document.write(mangB[i])
+                flag = true;
+                break;
+            }
+        }
+    }
+</script>
+</html>

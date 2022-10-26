@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let num = prompt('nhập số cần tính');
+    let result = daiThua(num)
+    document.write("giai thừa của " + num + " là " + result)
+    function daiThua(n) {
+        let soGiaithua = 1;
+        for (let i = 1; i <= n; i++){
+                soGiaithua *= i;
+        }
+        return soGiaithua;
+            }
+</script>
+</html>
