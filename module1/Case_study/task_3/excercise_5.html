@@ -5,9 +5,93 @@
     <title>Title</title>
 </head>
 <body>
-   
+<button type="button" onclick="cafe();">Cafe</button>
+<p id="cafeP"></p>
+<button type="button" onclick="cam();">Cam vắt</button>
+<p id="camP"></p>
+<button type="button" onclick="caRot();">Nước ép cà rốt</button>
+<p id="carotP"></p>
+<button type="button" onclick="caChua();">Nước ép cà chua</button>
+<p id="cachuaP"></p>
+<button type="button" onclick="nuoc();">Nước lọc</button>
+<p id="nuocP"></p>
+<button type="button" onclick="dua();">Nước dừa</button>
+<p id="duaP"></p>
+<button style="background: red;color: white" type="button" onclick="order()">order</button>
+<p id="result"></p>
 </body>
 <script>
+    let cafeclicked = false;
+    let sL = 0;
+    function cafe() {
+        document.getElementById('cafeP').innerHTML = "Giá: 13,000 Số lượng: <input id='cafe' type='number'>";
+        cafeclicked = true;
+    }
 
+    let camclicked = false;
+
+    function cam() {
+        document.getElementById('camP').innerHTML = "Giá: 15,000 Số lượng: <input id='cam' type='number'>";
+        camclicked = true;
+    }
+
+    let carotclicked = false;
+
+    function caRot() {
+        document.getElementById('carotP').innerHTML = "Giá: 17,000 Số lượng: <input id='carot' type='number'>";
+        carotclicked = true;
+    }
+
+    let cachuaclicked = false;
+
+    function caChua() {
+        document.getElementById('cachuaP').innerHTML = "Giá: 17,000 Số lượng: <input id='cachua' type='number'>";
+        cachuaclicked = true;
+
+    }
+
+    let nuocclicked = false;
+
+    function nuoc() {
+        document.getElementById('nuocP').innerHTML = "Giá: 10,000 Số lượng: <input id='nuoc' type='number'>";
+        nuocclicked = true;
+    }
+
+    let duaclicked = false;
+
+    function dua() {
+        document.getElementById('duaP').innerHTML = "Giá: 17,000 Số lượng: <input id='dua' type='number'>";
+        duaclicked = true;
+    }
+
+    function order() {
+        let result = 0;
+        if (cafeclicked) {
+            sL = document.getElementById("cafe").value;
+            result += sL * 13;
+        }
+        if (camclicked) {
+            sL = document.getElementById('cam').value;
+            result += sL * 15;
+        }
+        if (carotclicked) {
+            sL = document.getElementById('carot').value;
+            result += sL * 17;
+        }
+        if (cachuaclicked) {
+            sL = document.getElementById('cachua').value;
+            result += sL * 17;
+        }
+        if (nuocclicked) {
+            sL = document.getElementById('nuoc').value;
+            result += sL * 10;
+
+        }
+        if (duaclicked) {
+            sL = document.getElementById('dua').value;
+            result += sL * 17;
+        }
+        document.getElementById('result').innerHTML = "số tiền quý khách cần thanh toán là: <b>" + result + ",000</b>";
+    }
 </script>
 </html>
