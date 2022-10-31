@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt('nhập độ dài mảng 1');
+    let b = +prompt('nhập độ dài mảng 2');
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < a ; i++) {
+        arr1[i] = +prompt('nhập phần tử mảng 1');
+    }
+    for (let i = 0; i < b; i++) {
+        arr2[i] = +prompt('nhập phần tử mảng 2');
+    }
+    lonNho(arr1,arr2);
+    function lonNho() {
+        let arr = [arr1,arr2];
+        let maxArr = arr[0][0];
+        let minArr = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++){
+                if (maxArr < arr[i][j]){
+                    maxArr = arr[i][j];
+                }
+                if (minArr > arr[i][j]){
+                    minArr = arr[i][j];
+                }
+            }
+        }
+        return document.write('giá trị lớn nhất là: ' + maxArr + ', giá trị nhỏ nhất là: ' + minArr);
+    }
+</script>
+</html>

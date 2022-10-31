@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt('nhập độ dài mảng 1');
+    let b = +prompt('nhập độ dài mảng 2');
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < a; i++) {
+        arr1[i] = +prompt('nhập phần tử mảng 1');
+    }
+    for (let i = 0; i < b; i++) {
+        arr2[i] = +prompt('nhập phần tử nhóm 2');
+    }
+    soNguyenTo(arr1, arr2);
+
+    function soNguyenTo(arr1, arr2) {
+        let newArr = [arr1, arr2]
+        document.write(arr1 + "<br>" + arr2 + "<br>");
+        let newArr2 = [];
+        for (let i = 0; i < newArr.length; i++) {
+            for (let j = 0; j < newArr[i].length; j++) {
+                let check = true;
+                if (newArr[i][j] >= 2) {
+                    for (let k = 2; k < newArr[i][j]; k++) {
+                        if (newArr[i][j] % k == 0) {
+                            check = false;
+                            break;
+                        }
+                    }
+                } else {
+                    check = false;
+                }
+                if (check == true) {
+                    if (newArr2.indexOf(newArr[i][j]) === -1) {
+                        newArr2.push(newArr[i][j]);
+                    }
+                }
+            }
+        }
+        return document.write('các số nguyên tố có trong mảng là: ' + newArr2)
+    }
+</script>
+</html>

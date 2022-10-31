@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let string = prompt('mời nhập chuỗi');
+    let arr = string.split('');
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (result.indexOf(arr[i]) === -1) {
+            result.push(arr[i]);
+        }
+    }
+    document.write('chuỗi ' + string + ' có các kí tự khác nhau là: ' + result)
+</script>
+</html>

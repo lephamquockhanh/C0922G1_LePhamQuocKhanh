@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt('nhập số hạng a');
+    let b = +prompt('nhập số hạng b');
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < a; i++) {
+        arr1[i] = +prompt('nhập phần tử mảng 1');
+    }
+    for (let i = 0; i < b; i++) {
+        arr2[i] = +prompt('nhập phần tử mảng 2');
+    }
+    sum(arr1, arr2);
+
+    function sum() {
+        let tong = 0;
+        let sumarr = [arr1, arr2]
+        for (let i = 0; i < sumarr.length; i++) {
+            for (let j = 0; j < sumarr[i].length; j++) {
+                if (sumarr[i][j] % 2 == 0) {
+                    tong += sumarr[i][j];
+                }
+            }
+        }
+        return document.write('tổng các số chẵn trong ma trận: ' + tong);
+    }
+</script>
+</html>

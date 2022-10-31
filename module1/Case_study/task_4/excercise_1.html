@@ -7,4 +7,26 @@
 <body>
 
 </body>
+<script>
+    let string = prompt("Mời nhập vào một chuỗi");
+    arr= string.toLowerCase().split(" ");
+    document.write( "Trước khi chuẩn hóa: " + string);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != "") {
+            arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+        }
+    }
+    let maxArray = 0;
+    let result = "";
+    for (let i = 0; i < arr.length; i++) {
+        if (maxArray < arr[i].length) {
+            maxArray = arr[i].length;
+            result = arr[i];
+        }
+    }
+
+    document.write("Sau khi chuẩn hóa: " + arr.join(" ") + "<br>");
+    document.write("Từ dài nhất trong chuỗi là: " + result)
+    
+</script>
 </html>

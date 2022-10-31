@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let string1 = prompt('nhập chuỗi 1');
+    let string2 = prompt('nhập chuối 2');
+    let arr1 = string1.split('');
+    let arr2 = string2.split('');
+    let newsymbol = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                newsymbol.push(arr1[i]);
+                arr1.splice(i, 1);
+            }
+        }
+    }
+    document.write('hai chuỗi có kí tư chung là: ' + newsymbol)
+</script>
+</html>
